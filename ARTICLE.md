@@ -900,4 +900,4 @@ you will find your nuxt app running in the browser go ahead and add your nicknam
 
 ## Conclusion
 
-In this article you are succesfully building a chat app using nuxtjs and expressjs, if you notice i didn't save the nickname into database this will create a chaos if same person login with the same name you can go ahead and change that by creating table for nickname using Step 1 as reference. If you want to get the full code go ahead and clone this [repo]()
+In this article you are succesfully building a chat app using nuxtjs and expressjs, if you notice i didn't save the nickname into database this will create a chaos if same person login with the same name you can go ahead and change that by creating table for nickname using Step 1 as reference. If you want to get the full code go ahead and clone this [repo](https://github.com/spiritbro1/nuxtjs-expressjs-chat)
