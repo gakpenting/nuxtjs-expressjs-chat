@@ -361,7 +361,7 @@ Continuous integration: None
 What is your GitHub username? #ENTER your username
 Version control system: None
 ```
-After that wait for it to complete, while waiting create a folder called ```public``` this is where your nuxtjs generated app resides. And you can also serve that in your nodejs server. Now go to ```frontend/nuxt.config.js``` and change the content to this :
+After that wait for it to complete, while waiting create a folder called `public` this is where your nuxtjs generated app resides. And you can also serve that in your nodejs server. Now go to `frontend/nuxt.config.js` and change the content to this :
 
 ```javascript
 export default {
@@ -425,7 +425,7 @@ export default {
 }
 
 ```
-This will tell nuxt how you want your file to be generated later. After that now create file called ```ts-shim.d.ts``` in ```frontend``` folder, this file is used for telling code editor to index the ```$axios``` module so that you can access it anywhere in ```.vue``` file write this code below :
+This will tell nuxt how you want your file to be generated later. After that now create file called `ts-shim.d.ts` in `frontend` folder, this file is used for telling code editor to index the `$axios` module so that you can access it anywhere in `.vue` file write this code below :
 
 ```javascript
 import { NuxtAxiosInstance } from '@nuxtjs/axios'
@@ -439,7 +439,7 @@ declare module '@nuxt/types' {
   }
 }
 ```
-after that in ```tsconfig.json``` add the types like this :
+after that in `tsconfig.json` add the types like this :
 
 ```javascript
  "types": [
@@ -449,7 +449,7 @@ after that in ```tsconfig.json``` add the types like this :
       "@types/js-cookie"
     ]
 ```
-After that change the dependencies in ```frontend/package.json``` like this :
+After that change the dependencies in `frontend/package.json` like this :
 
 ```json
 "dependencies": {
@@ -466,12 +466,12 @@ After that change the dependencies in ```frontend/package.json``` like this :
     "socket.io-client": "^3.0.1"
   },
 ```
-And now run this command in ```frontend``` folder :
+And now run this command in `frontend` folder :
 
 ```bash
 npm install
 ```
-Change ```frontend/layouts/default.vue``` into this :
+Change `frontend/layouts/default.vue` into this :
 
 ```vue
 <template>
@@ -479,7 +479,7 @@ Change ```frontend/layouts/default.vue``` into this :
 </template>
 ```
 
-After that in ```frontend/pages``` folder create 4 files first file is called ```index.vue``` this is where our homepage resides, add this code :
+After that in `frontend/pages` folder create 4 files first file is called `index.vue` this is where our homepage resides, add this code :
 
 ```vue
 <template>
@@ -496,7 +496,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 export default class MyStore extends Vue {}
 </script>
 ```
-Here you can see that your component above is extending another component called ```LoginUser``` you will create this later now you will focus on creating all 4 pages first now continue and create ```login_admin.vue``` file in ```frontend/pages``` folder add this below code :
+Here you can see that your component above is extending another component called `LoginUser` you will create this later now you will focus on creating all 4 pages first now continue and create `login_admin.vue` file in `frontend/pages` folder add this below code :
 
 ```vue
 <template>
@@ -517,7 +517,7 @@ export default class MyStore extends Vue {
 </script>
 ```
 
-create ```chat_admin.vue``` file in ```frontend/pages``` folder add this below code :
+create `chat_admin.vue` file in `frontend/pages` folder add this below code :
 
 ```vue
 <template>
@@ -534,7 +534,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 export default class MyStore extends Vue {}
 </script>
 ```
-and finally create ```chat.vue``` file in ```frontend/pages``` folder and add this below code :
+and finally create `chat.vue` file in `frontend/pages` folder and add this below code :
 
 ```vue
 <template>
@@ -554,7 +554,7 @@ export default class MyStore extends Vue {
 </script>
 
 ```
-Now you need to add ```components``` in order for your pages above to work first create a file called ```LoginUser.vue``` in ```frontend/components``` folder and add this below code :
+Now you need to add `components` in order for your pages above to work first create a file called `LoginUser.vue` in `frontend/components` folder and add this below code :
 
 ```vue
 <template>
@@ -610,7 +610,7 @@ export default class MyStore extends Vue {
 }
 </script>
 ```
-create a file called ```LoginAdmin.vue``` in ```frontend/components``` folder and add this below code :
+create a file called `LoginAdmin.vue` in `frontend/components` folder and add this below code :
 
 ```vue
 <template>
@@ -700,7 +700,7 @@ export default class MyStore extends Vue {
 }
 </script>
 ```
-create a folder called ```chat-component``` in ```frontend/components``` folder and create a file called ```ChatAdmin.vue``` in ```frontend/components/chat-component``` folder and add this below code :
+create a folder called `chat-component` in `frontend/components` folder and create a file called `ChatAdmin.vue` in `frontend/components/chat-component` folder and add this below code :
 
 ```vue
 <template>
@@ -758,7 +758,7 @@ export default class ChatUser extends Vue {
 }
 </script>
 ```
-create a file called ```ChatUser.vue``` in ```frontend/components/chat-component``` folder and add this below code :
+create a file called `ChatUser.vue` in `frontend/components/chat-component` folder and add this below code :
 
 ```vue
 <template>
@@ -810,7 +810,7 @@ export default class ChatUser extends Vue {
 </script>
 
 ```
-create a file called ```Message.vue``` in ```frontend/components/chat-component``` folder and add this below code :
+create a file called `Message.vue` in `frontend/components/chat-component` folder and add this below code :
 
 ```vue
 <template>
@@ -892,11 +892,11 @@ export default class Message extends Vue {
 </script>
 ```
 
-And it's done now go to your ```frontend``` folder and run ```npm run dev``` and go to 
+And it's done now go to your `frontend` folder and run `npm run dev` and go to 
 
     http://localhost:8000
 
-you will find your nuxt app running in the browser go ahead and add your nickname and start chatting, to login to admin just go to ```/login_admin``` and login using username and password that you create earlier in Step 1.
+you will find your nuxt app running in the browser go ahead and add your nickname and start chatting, to login to admin just go to `/login_admin` and login using username and password that you create earlier in Step 1.
 
 ## Conclusion
 
